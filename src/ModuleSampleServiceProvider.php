@@ -11,7 +11,7 @@ class ModulesSampleServiceProvider extends ServiceProvider {
 		$this->loadViewsFrom(__DIR__.'/resources/views', 'modules-sample');
 		$this->publishes([
 			__DIR__.'/config/modules-sample.php' => config_path('modules-sample.php'),
-		], 'config');
+		], 'modules-sample-php');
 		/*$this->publishes([
 			__DIR__.'/assets' => public_path('vendor/modules-settings')
 		], 'public');*/
@@ -20,15 +20,15 @@ class ModulesSampleServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//check of parent module config exists
-	    if ( !config_exist('modules-sample') && file_exists(__DIR__.'/config/navigation-menu.php') {
+	    if (file_exists(__DIR__.'/config/navigation-menu.php') ) { //!config('modules-sample') && 
 			$this->mergeConfigFrom(
-				__DIR__.'/config/navigation-menu.php', 'navigation-menu'
+				__DIR__ . '/config/navigation-menu.php', 'navigation-menu.addons.sub-menu'
 			);
 	    }
 		
 		//add menu config
 		$this->mergeConfigFrom(
-	        __DIR__.'/config/navigation-sub-menu.php', 'navigation-menu.modules-sample.sub-menu'
+	        __DIR__ . '/config/navigation-sub-menu.php', 'navigation-menu.addons.sub-menu.modules-sample.sub-menu'
 	     );
 
 	}

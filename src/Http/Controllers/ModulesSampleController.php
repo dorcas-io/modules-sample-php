@@ -23,7 +23,7 @@ class ModulesSampleController extends Controller {
             'page' => ['title' => config('modules-sample.title')],
             'header' => ['title' => 'Sample Module'],
             'selectedMenu' => 'modules-sample',
-            'submenuConfig' => 'navigation-menu.modules-sample.sub-menu',
+            'submenuConfig' => 'navigation-menu.addons.sub-menu.modules-sample.sub-menu',
             'submenuAction' => ''
         ];
     }

@@ -1,13 +1,24 @@
 <?php
 
+/*
+
+Contains the settings for adding the modules options to the hubs navigation menu
+
+icon - specify a fe icon
+dashboard - 'all', 'business', 'professional' or 'desk'
+title - specify the visible title
+route - specify laravel route name
+clickable - boolen if it should be clickable or only its choldren should be
+
+
+*/
 return [
     'modules-sample' => [
-        'icon' => 'fe fe-settings',
-        'dashboard' => 'all',
         'title' => 'Sample',
-        'route' => 'sample',
-        'clickable' => false,
-        'navbar' => false,
+        'route' => 'sample-main',
+        'icon' => 'fe fe-settings',
+        'clickable' => true,
+        'navbar' => true,
         'sub-menu' => []
     ]
 ];
