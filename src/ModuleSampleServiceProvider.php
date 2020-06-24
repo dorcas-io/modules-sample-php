@@ -11,7 +11,7 @@ class ModulesSampleServiceProvider extends ServiceProvider {
 		$this->loadViewsFrom(__DIR__.'/resources/views', 'modules-sample');
 		$this->publishes([
 			__DIR__.'/config/modules-sample.php' => config_path('modules-sample.php'),
-		], 'modules-sample-php');
+		], 'modules-sample');
 		/*$this->publishes([
 			__DIR__.'/assets' => public_path('vendor/modules-settings')
 		], 'public');*/
